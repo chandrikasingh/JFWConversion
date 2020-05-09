@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">JConversion</string>
+    <string name="enter_intel_str">Enter Hex digits / Intel Line [Without CRC] </string>
+    <string name="add_hex">Add Hex Bytes</string>
+    <string name="hex_line_xsum">XSum from Hex Bytes</string>
+    <string name="hex_result">Result</string>
+    <string name="intel_format_line">Intel Line  </string>
+
+    <string name="dec_to_hex_bin">D-Hex-Bin</string>
+    <string name="hex_to_dec_bin">H-Dec-Bin</string>
+    <string name="bin_to_hex_dec">B-Hex-Dec</string>
+    <string name="enter_binary_str">Binary entry..</string>
+    <string name="enter_hex_str">Hexadecimal entry..</string>
+    <string name="enter_dec_str">Decimal entry..</string>
+    <string name="enter_hex_to_2s_complement_str">Enter hex to form 2s-Complement</string>
+    <string name="to_2s_complement">2\'S Complement</string>
+</resources>

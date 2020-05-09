@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/enterHexLineEtv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_weight="2"
+        android:hint="@string/enter_intel_str"
+        android:paddingLeft="4dp"
+        android:paddingTop="10dp"
+        android:singleLine="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/hexOperation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/enterHexLineEtv"
+        app:layout_constraintVertical_bias="0.083"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-16dp">
+
+        <Button
+            android:id="@+id/addHexBytesBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_weight=".3"
+            android:background="@drawable/button_bg"
+            android:text="@string/add_hex"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/convertToXSumBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_weight=".5"
+            android:background="@drawable/button_bg"
+            android:clickable="true"
+            android:text="@string/hex_line_xsum"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/resultTv"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight=".2"
+            android:focusable="false"
+            android:gravity="center"
+            android:hint="@string/hex_result"
+            android:padding="5dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/intelLineTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/intel_format_line"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hexOperation" />
+
+
+    <EditText
+        android:id="@+id/enterDecToHexEtv"
+        android:layout_width="323dp"
+        android:layout_height="49dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="84dp"
+        android:layout_weight="2"
+        android:hint="@string/enter_dec_str"
+        android:singleLine="true"
+        app:layout_constraintTop_toBottomOf="@id/intelLineTv"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/decToHexBinBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="84dp"
+        android:background="@drawable/button_bg"
+        android:clickable="true"
+        android:text="@string/dec_to_hex_bin"
+        app:layout_constraintStart_toEndOf="@id/enterDecToHexEtv"
+        app:layout_constraintTop_toBottomOf="@id/intelLineTv"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/enterHexToDecEtv"
+        android:layout_width="323dp"
+        android:layout_height="49dp"
+        android:layout_gravity="left"
+        android:layout_weight="2"
+        android:hint="@string/enter_hex_str"
+        android:singleLine="true"
+        app:layout_constraintTop_toBottomOf="@id/decToHexBinBtn"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/hexToDecBinBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:background="@drawable/button_bg"
+        android:clickable="true"
+        android:text="@string/hex_to_dec_bin"
+        app:layout_constraintStart_toEndOf="@id/enterHexToDecEtv"
+        app:layout_constraintTop_toBottomOf="@id/decToHexBinBtn"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="323dp" />
+
+    <EditText
+        android:id="@+id/enterBinToHexDecEtv"
+        android:layout_width="323dp"
+        android:layout_height="49dp"
+        android:layout_gravity="left"
+        android:layout_weight="2"
+        android:hint="@string/enter_binary_str"
+        android:singleLine="true"
+        app:layout_constraintTop_toBottomOf="@id/hexToDecBinBtn"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/binToHexDecBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:background="@drawable/button_bg"
+        android:clickable="true"
+        android:text="@string/bin_to_hex_dec"
+        app:layout_constraintStart_toEndOf="@id/enterBinToHexDecEtv"
+        app:layout_constraintTop_toBottomOf="@id/hexToDecBinBtn"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="323dp" />
+
+    <EditText
+        android:id="@+id/hexToConv2sComplementEtv"
+        android:layout_width="288dp"
+        android:layout_height="49dp"
+        android:layout_gravity="left"
+        android:layout_weight="2"
+        android:hint="@string/enter_hex_to_2s_complement_str"
+        android:singleLine="true"
+        app:layout_constraintTop_toBottomOf="@id/binToHexDecBtn"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/convert2sComplementBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:background="@drawable/button_bg"
+        android:clickable="true"
+        android:text="@string/to_2s_complement"
+        app:layout_constraintStart_toEndOf="@id/hexToConv2sComplementEtv"
+        app:layout_constraintTop_toBottomOf="@id/binToHexDecBtn"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="323dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
